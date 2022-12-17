@@ -13,7 +13,7 @@ app.get("/complaints",(req,res)=>{
     res.sendFile(__dirname+"/public/publiccomplaints.html")
 })
 
-app.get("/index",function(req,res)
+app.get("/",function(req,res)
 {
     // res.sendFile(__dirname+"/index.html");
     res.send("Hello")
@@ -37,7 +37,7 @@ var db = mongoose.connection;
 db.on('error',()=>console.log("Error in Connecting to Database"));
 db.once('open',()=>console.log("Connected to Database"))
 
-app.post("/index",(req,res)=>{
+app.post("/",(req,res)=>{
     console.log(req.body);
     var name = req.body.name;
     var phone = req.body.phone;
