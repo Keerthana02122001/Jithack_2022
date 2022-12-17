@@ -15,8 +15,8 @@ app.get("/complaints",(req,res)=>{
 
 app.get("/",function(req,res)
 {
-    // res.sendFile(__dirname+"/index.html");
-    res.send("Hello")
+    res.sendFile(__dirname+"/index.html");
+    // res.send("Hello")
 })
 
 
